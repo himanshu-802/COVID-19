@@ -339,7 +339,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8  offset-lg-2 col-12">
-				<form>
+				<form action="" method="POST">
 <div class="form-group">
     <label >username</label>
     <input type="text" class="form-control"  name="username"placeholder="Name" autocomplete="off" required>
@@ -384,7 +384,7 @@
     <label >Example textarea</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-   <button type="submit" class="btn btn-primary">Submit</button>
+   <button type="submit" class="btn btn-primary" name="submit">Submit</button>
 </form>
 			</div>
 		</div>
@@ -397,6 +397,40 @@
 </body>
 </html>
 
+<?php
+
+include 'dbcon.php';
+
+if(isset($_POST['submit'])){
+	$username= $_POST['username'];
+	$email= $_POST['email'];
+	$mobile= $_POST['mobile'];
+	$symp= $_POST['coronasym'];
+	$msg= $_POST['msg'];
+
+	$chk="";
+	foreach($symp as $chk1){
+		$chk .= $chk1.",";
+	}
+	$insertquery="insert into coronacase(username,email,mobile,symp, message) values('$username','$email','$mobile','$chk','$msg') ";
+	$query = mysqli_query($con,$insertquery);
+	if($con){
+	?>
+	<script>
+		alert("insertion successful");
+	</script>
+	<?php
+}
+else{
+	?>
+	<script>
+		alert(" Not Inserted ");
+	</script>
+	<?php
+
+}
+}
+?>
 
 
 
