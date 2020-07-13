@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bootstrap 4 Example</title>
+  <title>COVID-19</title>
   <?php
   include 'Links/links.php';
   include 'CSS/style.php';
