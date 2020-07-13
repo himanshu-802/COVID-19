@@ -1,4 +1,8 @@
 <style type="text/css">
+
+	html{
+		scroll-behavior: smooth;
+	}
 	*{
 		margin: 0;
 		padding: 0;
@@ -22,7 +26,7 @@
 	}
 	.corona_rotate img{
 		animation: gocorona 3s linear infinite;
-		height: 80px;
+		height: 70px;
 	}
 	@keyframes gocorona{
 		0% {
@@ -76,6 +80,15 @@ text-align: center;
 
 .sub_section{
 	background-color:  #fbfafd;
+}
+
+
+/**************footer***************/
+.footer_style{
+	background-color: #a29bfe!important;
+}
+.footer_Style p{
+	margin-bottom: 0!important;
 }
 
 </style>
