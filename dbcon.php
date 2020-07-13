@@ -16,7 +16,7 @@ if($con){
 else{
 	?>
 	<script>
-		alert(" no connection");
+	//	alert(" no connection");
 	</script>
 	<?php
 
